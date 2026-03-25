@@ -30,6 +30,7 @@ client.on("messageCreate", async (msg) => {
 
     if (!member.roles.cache.has(WHITELIST_ROLE_ID)) {
       await member.roles.add(WHITELIST_ROLE_ID);
+      await msg.channel.send(`${user} You've been given <@&${WHITELIST_ROLE_ID}>`);
       console.log(`whitelisted ${user.tag}`);
     }
   }
