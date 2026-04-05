@@ -50,6 +50,7 @@ client.on("messageCreate", async (msg) => {
           SendMessages: true,
           ReadMessageHistory: true,
         });
+        await msg.channel.send(`<@&${RESELLER_ROLE_ID}> New Robux ticket!`);
       } catch (err) {
         console.error("perm overwrite failed:", err);
       }
